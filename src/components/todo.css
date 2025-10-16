@@ -1,0 +1,113 @@
+.bas-todo{
+    display: flex;
+    align-items: center;
+    margin: 10px;
+    padding: 10px;
+    
+    border-bottom: 1px solid white;
+    background-color: #f9f9f9;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.buton{
+    margin: 10px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    border: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer; 
+    width: 100px;
+    height: 50px;  
+    font-weight: 700;
+    font-size: 15px;
+}
+.buton:hover{
+    border: 1px solid #000000;
+    color: rgb(0, 0, 0);
+    transition: 0.9s;
+}
+.input{
+border: none;
+    padding: 10px;
+    border-bottom: 1px solid #b4b4b4;
+    border-radius: 5px;
+    width: 350px;
+    font-size: 15px;
+    font-weight: 700;
+}
+.input:focus{
+    outline: none;
+    border-bottom: 2px solid #000000;
+    transition: 0.5s;
+}
+
+/* ========================================================= */
+/* Todo.jsx (Liste Öğeleri ve İkonlar) Stilleri */
+/* ========================================================= */
+
+/* Ana Todo Öğesi Kapsayıcısı */
+.todo-item-container {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 10px 0; 
+    border-bottom: 1px solid #eee;
+}
+
+/* Todo Metin Alanı */
+.todo-content-text {
+    font-size: 18px;
+    font-weight: 500;
+    color: #000000ff;
+    /* Metin taşmasını yönetmek için */
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: pre-wrap;
+    max-width: calc(100% - 100px); /* İkonlar için yer bırakıldı */
+    margin-right: 15px;
+}
+
+/* Simgeler Kapsayıcısı */
+.todo-icons-wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 15px; 
+    align-items: center;
+    flex-shrink: 0; /* Metin uzasa bile ikonların yerini korur */
+}
+
+/* İkon Sarmalayıcıların Temel Stili (Delete ve Edit için) */
+.icon-wrapper {
+    padding: 5px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+}
+
+/* 1. SİLME İKONU Stili (Sabit Arka Plan) */
+.delete-icon-wrapper {
+    background-color: #f5c4c4ff;
+    /* Hover stili :hover pseudo-class ile aşağıda tanımlanacak */
+}
+
+.delete-icon-wrapper:hover {
+    opacity: 0.8;
+    box-shadow: 0 0 5px rgba(255, 77, 79, 0.5);
+}
+
+/* 2. DÜZENLEME İKONU Stili */
+/* Başlangıçta şeffaf */
+.edit-icon-wrapper {
+    background-color: transparent;
+}
+
+.edit-icon-wrapper:hover {
+    background-color: rgba(24, 144, 255, 0.2); /* Hover'da hafif mavi arka plan */
+    box-shadow: 0 0 5px rgba(24, 144, 255, 0.5);
+}
